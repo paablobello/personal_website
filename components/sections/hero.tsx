@@ -5,7 +5,7 @@ import SplitText from "@/components/ui/split-text"
 
 export function Hero() {
   return (
-    <section className="container py-24 md:py-32 pt-32 md:pt-40">
+    <section className="container pb-12 md:pb-16 pt-32 md:pt-40">
       <div className="max-w-3xl" style={{ overflow: 'visible', paddingTop: '0.5rem' }}>
         <SplitText
           text="Hey, I&apos;m Pablo Bello 👋"
@@ -24,9 +24,6 @@ export function Hero() {
         />
         <p className="text-xl md:text-2xl text-muted-foreground mb-4 leading-relaxed">
           {siteConfig.personal.title}
-        </p>
-        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-          {siteConfig.description}
         </p>
       </div>
     </section>

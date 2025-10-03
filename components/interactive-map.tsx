@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef } from "react"
 import ReactMapGL, { Marker } from "react-map-gl"
 import type { MapRef } from "react-map-gl"
+import Image from "next/image"
 import { siteConfig } from "@/config/site"
 import "mapbox-gl/dist/mapbox-gl.css"
 
@@ -37,7 +38,7 @@ export function InteractiveMap() {
   }, [])
 
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden border">
+    <div className="relative w-full h-[260px] md:h-[320px] rounded-lg overflow-hidden border">
       <ReactMapGL
         ref={mapRef}
         initialViewState={{
@@ -62,13 +63,17 @@ export function InteractiveMap() {
         <Marker
           longitude={siteConfig.locations.from.coordinates.longitude}
           latitude={siteConfig.locations.from.coordinates.latitude}
-          anchor="bottom"
+          anchor="center"
         >
-          <div className="relative flex flex-col items-center">
-            <div className="bg-white border-2 border-gray-800 rounded-full p-2 shadow-lg">
-              <div className="w-2 h-2 rounded-full bg-gray-800" />
+          <div className="relative flex items-center justify-center cursor-pointer">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-3 border-white shadow-lg ring-2 ring-gray-900/10 hover:scale-110 transition-transform">
+              <Image
+                src="/house.png"
+                alt="House"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="absolute -bottom-1 w-0.5 h-3 bg-gray-800" />
           </div>
         </Marker>
 
@@ -76,13 +81,17 @@ export function InteractiveMap() {
         <Marker
           longitude={siteConfig.locations.current.coordinates.longitude}
           latitude={siteConfig.locations.current.coordinates.latitude}
-          anchor="bottom"
+          anchor="center"
         >
-          <div className="relative flex flex-col items-center">
-            <div className="bg-white border-2 border-gray-800 rounded-full p-2 shadow-lg">
-              <div className="w-2 h-2 rounded-full bg-gray-800" />
+          <div className="relative flex items-center justify-center cursor-pointer">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-3 border-white shadow-lg ring-2 ring-gray-900/10 hover:scale-110 transition-transform">
+              <Image
+                src="/memoji.png"
+                alt="Pablo Bello"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="absolute -bottom-1 w-0.5 h-3 bg-gray-800" />
           </div>
         </Marker>
       </ReactMapGL>

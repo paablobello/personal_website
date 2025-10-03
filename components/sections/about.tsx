@@ -13,7 +13,7 @@ export function About() {
             <span className="text-foreground font-medium">
               {siteConfig.locations.from.name}, {siteConfig.locations.from.country} {siteConfig.locations.from.flag}
             </span>
-            {", "}currently in{" "}
+            {", "}now based in{" "}
             <span className="text-foreground font-medium">
               {siteConfig.locations.current.name}, {siteConfig.locations.current.country} {siteConfig.locations.current.flag}
             </span>

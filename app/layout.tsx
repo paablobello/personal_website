@@ -7,7 +7,7 @@ import { ScrollRestoration } from "@/components/scroll-restoration"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Pablo Bello - Portfolio",
+  title: "Hey, I'm Pablo",
   description: "Personal portfolio and project showcase",
 }
 
