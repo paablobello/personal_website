@@ -1,59 +1,123 @@
 import { siteConfig } from "@/config/site"
 import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
 
 export function Interests() {
   return (
-    <section id="interests" className="container py-24 border-t bg-muted/50">
+    <section id="interests" className="container py-24 border-t">
       <div className="max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Interests</h2>
-        <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+        <p className="text-lg text-muted-foreground mb-16 leading-relaxed">
           {siteConfig.interests.intro}
         </p>
 
-        <div className="grid gap-12 md:grid-cols-2">
-          {/* Books */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Books I Recommend</h3>
-            <div className="space-y-4">
-              {siteConfig.interests.books.map((book, index) => (
-                <div key={index}>
-                  <p className="font-medium">{book.title}</p>
-                  <p className="text-sm text-muted-foreground">{book.author}</p>
-                </div>
-              ))}
+        <div className="space-y-20">
+          {/* Reading Section */}
+          <div className="space-y-16">
+            {/* Books */}
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <h3 className="text-2xl font-semibold">Books Worth Reading</h3>
+                <Separator className="flex-1" />
+              </div>
+              <div className="space-y-5">
+                {siteConfig.interests.books.map((book, index) => (
+                  <Link
+                    key={index}
+                    href={book.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start justify-between gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors"
+                  >
+                    <div className="flex-1">
+                      <p className="font-medium mb-1">
+                        {book.title}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {book.author}
+                      </p>
+                    </div>
+                    <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0 mt-0.5" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Articles */}
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <h3 className="text-2xl font-semibold">Articles & Essays</h3>
+                <Separator className="flex-1" />
+              </div>
+              <div className="space-y-5">
+                {siteConfig.interests.articles.map((article, index) => (
+                  <Link
+                    key={index}
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start justify-between gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors"
+                  >
+                    <div className="flex-1">
+                      <p className="font-medium mb-1">
+                        {article.title}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {article.author}
+                      </p>
+                    </div>
+                    <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0 mt-0.5" />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Twitter */}
+          {/* People I Follow */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Accounts I Follow</h3>
-            <div className="space-y-3">
-              {siteConfig.interests.twitter.map((account, index) => (
+            <div className="flex items-center gap-4 mb-8">
+              <h3 className="text-2xl font-semibold">People I Follow</h3>
+              <Separator className="flex-1" />
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {siteConfig.interests.people.map((person, index) => (
                 <Link
                   key={index}
-                  href={account.url}
+                  href={person.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-muted-foreground hover:text-foreground transition-colors"
+                  className="group p-4 -m-4 rounded-lg hover:bg-muted/50 transition-colors"
                 >
-                  <span className="font-medium">{account.name}</span>
-                  <span className="text-sm"> {account.handle}</span>
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <p className="font-medium">
+                      {person.name}
+                    </p>
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0" />
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {person.handle}
+                  </p>
+                  <p className="text-sm text-muted-foreground/80">
+                    {person.description}
+                  </p>
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Hobbies */}
-          <div className="md:col-span-2">
-            <h3 className="text-xl font-semibold mb-6">When I'm Not Coding</h3>
-            <div className="flex flex-wrap gap-3">
+          {/* When I'm Not Coding */}
+          <div>
+            <div className="flex items-center gap-4 mb-8">
+              <h3 className="text-2xl font-semibold">When I&apos;m Not Coding</h3>
+              <Separator className="flex-1" />
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
               {siteConfig.interests.hobbies.map((hobby, index) => (
-                <span
-                  key={index}
-                  className="text-sm text-muted-foreground"
-                >
-                  {hobby}
-                </span>
+                <div key={index} className="flex items-start gap-3 py-2">
+                  <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-foreground/40 flex-shrink-0" />
+                  <span className="text-muted-foreground leading-relaxed">{hobby}</span>
+                </div>
               ))}
             </div>
           </div>
