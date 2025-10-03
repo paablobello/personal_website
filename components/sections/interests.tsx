@@ -21,24 +21,24 @@ export function Interests() {
                 <h3 className="text-2xl font-semibold">Books Worth Reading</h3>
                 <Separator className="flex-1" />
               </div>
-              <div className="space-y-5">
+              <div className="grid gap-6 sm:grid-cols-2">
                 {siteConfig.interests.books.map((book, index) => (
                   <Link
                     key={index}
                     href={book.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-start justify-between gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors"
+                    className="group p-4 -m-4 rounded-lg hover:bg-muted/50 transition-colors"
                   >
-                    <div className="flex-1">
-                      <p className="font-medium mb-1">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <p className="font-medium">
                         {book.title}
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        {book.author}
-                      </p>
+                      <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0" />
                     </div>
-                    <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-muted-foreground">
+                      {book.author}
+                    </p>
                   </Link>
                 ))}
               </div>
@@ -50,24 +50,24 @@ export function Interests() {
                 <h3 className="text-2xl font-semibold">Articles & Essays</h3>
                 <Separator className="flex-1" />
               </div>
-              <div className="space-y-5">
+              <div className="grid gap-6 sm:grid-cols-2">
                 {siteConfig.interests.articles.map((article, index) => (
                   <Link
                     key={index}
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-start justify-between gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors"
+                    className="group p-4 -m-4 rounded-lg hover:bg-muted/50 transition-colors"
                   >
-                    <div className="flex-1">
-                      <p className="font-medium mb-1">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <p className="font-medium">
                         {article.title}
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        {article.author}
-                      </p>
+                      <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0" />
                     </div>
-                    <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-muted-foreground">
+                      {article.author}
+                    </p>
                   </Link>
                 ))}
               </div>
@@ -80,7 +80,7 @@ export function Interests() {
               <h3 className="text-2xl font-semibold">People I Follow</h3>
               <Separator className="flex-1" />
             </div>
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {siteConfig.interests.people.map((person, index) => (
                 <Link
                   key={index}
@@ -112,14 +112,9 @@ export function Interests() {
               <h3 className="text-2xl font-semibold">When I&apos;m Not Coding</h3>
               <Separator className="flex-1" />
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {siteConfig.interests.hobbies.map((hobby, index) => (
-                <div key={index} className="flex items-start gap-3 py-2">
-                  <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-foreground/40 flex-shrink-0" />
-                  <span className="text-muted-foreground leading-relaxed">{hobby}</span>
-                </div>
-              ))}
-            </div>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              {siteConfig.interests.hobbies}
+            </p>
           </div>
         </div>
       </div>
