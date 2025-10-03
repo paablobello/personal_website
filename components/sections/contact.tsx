@@ -36,15 +36,6 @@ export function Contact() {
           </Link>
           {". "}
         </p>
-        
-        <Link 
-          href={siteConfig.links.cv}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          View my resume →
-        </Link>
 
         <ContactLocalTimeNote />
 
