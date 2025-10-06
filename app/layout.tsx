@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { ScrollRestoration } from "@/components/scroll-restoration"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <ScrollRestoration />
         <Navigation />
         {children}
+        <Analytics />
       </body>
     </html>
   )
