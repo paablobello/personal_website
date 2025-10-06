@@ -27,10 +27,14 @@ export function Navigation() {
       className={`
         fixed top-0 left-0 right-0 z-50 w-full py-6 transition-all duration-300
         ${isScrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b shadow-sm' 
+          ? 'bg-background/90 backdrop-blur-xl border-b shadow-sm' 
           : 'bg-transparent'
         }
       `}
+      style={isScrolled ? {
+        WebkitBackdropFilter: 'blur(24px)',
+        backdropFilter: 'blur(24px)',
+      } : undefined}
     >
       <div className="container flex items-center justify-between">
         {/* Navigation Links - Hidden on mobile */}
