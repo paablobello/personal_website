@@ -10,7 +10,7 @@ export function Hero() {
         <SplitText
           text="Hey, I&apos;m Pablo Bello 👋"
           tag="h1"
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
           style={{ paddingBottom: '0.25rem' }}
           delay={60}
           duration={0.8}

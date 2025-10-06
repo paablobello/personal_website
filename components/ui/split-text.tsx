@@ -67,19 +67,25 @@ const SplitText: React.FC<SplitTextProps> = ({
       let targets: HTMLElement[] = [];
 
       if (splitType.includes('chars')) {
-        // Split by characters, handling emojis properly
-        const chars = Array.from(text); // Use Array.from to handle emojis correctly
-        el.innerHTML = chars
-          .map((char) => {
-            if (char === ' ') return `<span class="split-char" style="display: inline-block; opacity: 0;">&nbsp;</span>`;
-            // Check if it's an emoji (Unicode range)
-            const isEmoji = /\p{Emoji}/u.test(char);
-            if (isEmoji) {
-              return `<span class="split-char split-emoji" style="display: inline-block; opacity: 0;">${char}</span>`;
-            }
-            return `<span class="split-char" style="display: inline-block; opacity: 0;">${char}</span>`;
+        // Split by characters, handling emojis properly and keeping words together
+        const words = text.split(' ');
+        el.innerHTML = words
+          .map((word) => {
+            const chars = Array.from(word); // Use Array.from to handle emojis correctly
+            const charsHTML = chars
+              .map((char) => {
+                // Check if it's an emoji (Unicode range)
+                const isEmoji = /\p{Emoji}/u.test(char);
+                if (isEmoji) {
+                  return `<span class="split-char split-emoji" style="display: inline-block; opacity: 0;">${char}</span>`;
+                }
+                return `<span class="split-char" style="display: inline-block; opacity: 0;">${char}</span>`;
+              })
+              .join('');
+            // Wrap each word in a container with inline-block to prevent word breaking
+            return `<span class="split-word-wrapper" style="display: inline-block; white-space: nowrap;">${charsHTML}</span>`;
           })
-          .join('');
+          .join('<span class="split-char" style="display: inline-block; opacity: 0;">&nbsp;</span>');
         targets = Array.from(el.querySelectorAll('.split-char'));
       } else if (splitType.includes('words')) {
         // Split by words
