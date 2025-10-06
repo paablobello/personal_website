@@ -120,7 +120,7 @@ export const siteConfig = {
       title: "Software Engineer Intern",
       company: "NTT Data",
       location: "",
-      period: "Sep. 2023 - Jan. 2023",
+      period: "Sep. 2023 - Dec. 2023",
       description: "Contributed to the modernization of CENPOS, a large-scale healthcare management platform. Focus on backend optimizations to improve scalability and data processing speed for critical operations.",
       highlights: [
         "Optimized and refactored microservices with J2EE and Spring, reducing average API response time by 30% and improving overall performance",
