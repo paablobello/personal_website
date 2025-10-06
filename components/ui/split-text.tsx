@@ -186,13 +186,33 @@ const SplitText: React.FC<SplitTextProps> = ({
   };
   const classes = `split-parent inline-block whitespace-normal ${className}`;
 
-  const Tag = tag as keyof JSX.IntrinsicElements;
+  const commonProps = {
+    style,
+    className: classes,
+    children: text,
+  };
 
-  return (
-    <Tag ref={ref as any} style={style} className={classes}>
-      {text}
-    </Tag>
-  );
+  // Return appropriate element based on tag
+  switch (tag) {
+    case 'h1':
+      return <h1 ref={ref as React.Ref<HTMLHeadingElement>} {...commonProps} />;
+    case 'h2':
+      return <h2 ref={ref as React.Ref<HTMLHeadingElement>} {...commonProps} />;
+    case 'h3':
+      return <h3 ref={ref as React.Ref<HTMLHeadingElement>} {...commonProps} />;
+    case 'h4':
+      return <h4 ref={ref as React.Ref<HTMLHeadingElement>} {...commonProps} />;
+    case 'h5':
+      return <h5 ref={ref as React.Ref<HTMLHeadingElement>} {...commonProps} />;
+    case 'h6':
+      return <h6 ref={ref as React.Ref<HTMLHeadingElement>} {...commonProps} />;
+    case 'p':
+      return <p ref={ref as React.Ref<HTMLParagraphElement>} {...commonProps} />;
+    case 'span':
+      return <span ref={ref as React.Ref<HTMLSpanElement>} {...commonProps} />;
+    default:
+      return <p ref={ref as React.Ref<HTMLParagraphElement>} {...commonProps} />;
+  }
 };
 
 export default SplitText;
