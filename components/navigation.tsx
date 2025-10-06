@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Github, Linkedin, Mail, FileText } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
+// import { FileText } from "lucide-react" // TODO: Descomentar cuando se active el botón de Resume
 import { siteConfig } from "@/config/site"
 
 export function Navigation() {
@@ -63,7 +64,8 @@ export function Navigation() {
         {/* Resume + Social Links */}
         <div className="flex items-center gap-4 md:gap-6 ml-auto">
           {/* Resume - More prominent on mobile */}
-          <Link 
+          {/* TODO: Descomentar cuando el CV esté listo */}
+          {/* <Link 
             href={siteConfig.links.cv}
             target="_blank"
             rel="noopener noreferrer"
@@ -71,7 +73,7 @@ export function Navigation() {
           >
             <FileText className="h-5 w-5 md:h-4 md:w-4" />
             <span className="hidden sm:inline">Resume</span>
-          </Link>
+          </Link> */}
           
           {/* Social Links - Optimized for mobile touch targets */}
           <div className="flex items-center gap-4 md:gap-4">

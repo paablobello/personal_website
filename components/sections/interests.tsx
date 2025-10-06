@@ -77,7 +77,7 @@ export function Interests() {
           {/* People I Follow */}
           <div>
             <div className="flex items-center gap-4 mb-8">
-              <h3 className="text-2xl font-semibold">People I Follow</h3>
+              <h3 className="text-2xl font-semibold">Some People I Follow</h3>
               <Separator className="flex-1" />
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
