@@ -42,21 +42,27 @@ const SplitText: React.FC<SplitTextProps> = ({
 }) => {
   const ref = useRef<HTMLElement>(null);
   const animationCompletedRef = useRef(false);
-  const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
+  const [isReady, setIsReady] = useState<boolean>(false);
 
   useEffect(() => {
-    if (document.fonts.status === 'loaded') {
-      setFontsLoaded(true);
-    } else {
-      document.fonts.ready.then(() => {
-        setFontsLoaded(true);
-      });
-    }
+    const checkReady = async () => {
+      // Wait for fonts
+      await document.fonts.ready;
+      
+      // Wait for window load (all resources loaded)
+      if (document.readyState === 'complete') {
+        setIsReady(true);
+      } else {
+        window.addEventListener('load', () => setIsReady(true), { once: true });
+      }
+    };
+    
+    checkReady();
   }, []);
 
   useGSAP(
     () => {
-      if (!ref.current || !text || !fontsLoaded) return;
+      if (!ref.current || !text || !isReady) return;
       const el = ref.current;
       
       // Prevent scroll jump on load
@@ -77,15 +83,15 @@ const SplitText: React.FC<SplitTextProps> = ({
                 // Check if it's an emoji (Unicode range)
                 const isEmoji = /\p{Emoji}/u.test(char);
                 if (isEmoji) {
-                  return `<span class="split-char split-emoji" style="display: inline-block; opacity: 0;">${char}</span>`;
+                  return `<span class="split-char split-emoji" style="display: inline-block; opacity: 0; will-change: transform, opacity; transform: translate3d(0,0,0);">${char}</span>`;
                 }
-                return `<span class="split-char" style="display: inline-block; opacity: 0;">${char}</span>`;
+                return `<span class="split-char" style="display: inline-block; opacity: 0; will-change: transform, opacity; transform: translate3d(0,0,0);">${char}</span>`;
               })
               .join('');
             // Wrap each word in a container with inline-block to prevent word breaking
             return `<span class="split-word-wrapper" style="display: inline-block; white-space: nowrap;">${charsHTML}</span>`;
           })
-          .join('<span class="split-char" style="display: inline-block; opacity: 0;">&nbsp;</span>');
+          .join('<span class="split-char" style="display: inline-block; opacity: 0; will-change: transform, opacity; transform: translate3d(0,0,0);">&nbsp;</span>');
         targets = Array.from(el.querySelectorAll('.split-char'));
       } else if (splitType.includes('words')) {
         // Split by words
@@ -106,9 +112,10 @@ const SplitText: React.FC<SplitTextProps> = ({
         // Animate immediately if already in viewport
         gsap.fromTo(
           targets,
-          { ...from },
+          { ...from, force3D: true },
           {
             ...to,
+            force3D: true,
             duration,
             ease,
             stagger: delay / 1000,
@@ -134,9 +141,10 @@ const SplitText: React.FC<SplitTextProps> = ({
 
         gsap.fromTo(
           targets,
-          { ...from },
+          { ...from, force3D: true },
           {
             ...to,
+            force3D: true,
             duration,
             ease,
             stagger: delay / 1000,
@@ -174,7 +182,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         JSON.stringify(to),
         threshold,
         rootMargin,
-        fontsLoaded,
+        isReady,
         onLetterAnimationComplete,
         JSON.stringify(customStyle)
       ],
@@ -185,7 +193,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const style: React.CSSProperties = {
     textAlign,
     wordWrap: 'break-word',
-    opacity: fontsLoaded ? 1 : 0,
+    opacity: isReady ? 1 : 0,
     transition: 'opacity 0.1s ease',
     overflow: 'visible',
     ...customStyle,
