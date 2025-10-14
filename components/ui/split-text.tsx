@@ -42,27 +42,21 @@ const SplitText: React.FC<SplitTextProps> = ({
 }) => {
   const ref = useRef<HTMLElement>(null);
   const animationCompletedRef = useRef(false);
-  const [isReady, setIsReady] = useState<boolean>(false);
+  const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    const checkReady = async () => {
-      // Wait for fonts
-      await document.fonts.ready;
-      
-      // Wait for window load (all resources loaded)
-      if (document.readyState === 'complete') {
-        setIsReady(true);
-      } else {
-        window.addEventListener('load', () => setIsReady(true), { once: true });
-      }
-    };
-    
-    checkReady();
+    if (document.fonts.status === 'loaded') {
+      setFontsLoaded(true);
+    } else {
+      document.fonts.ready.then(() => {
+        setFontsLoaded(true);
+      });
+    }
   }, []);
 
   useGSAP(
     () => {
-      if (!ref.current || !text || !isReady) return;
+      if (!ref.current || !text || !fontsLoaded) return;
       const el = ref.current;
       
       // Prevent scroll jump on load
@@ -182,7 +176,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         JSON.stringify(to),
         threshold,
         rootMargin,
-        isReady,
+        fontsLoaded,
         onLetterAnimationComplete,
         JSON.stringify(customStyle)
       ],
@@ -193,7 +187,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const style: React.CSSProperties = {
     textAlign,
     wordWrap: 'break-word',
-    opacity: isReady ? 1 : 0,
+    opacity: fontsLoaded ? 1 : 0,
     transition: 'opacity 0.1s ease',
     overflow: 'visible',
     ...customStyle,
