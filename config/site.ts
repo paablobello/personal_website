@@ -14,7 +14,7 @@ export const siteConfig = {
     bio: [
       "I'm a Master's in AI student at Boston University (merit scholarship), with a builder's mentality.",
       "My journey into software began at 16, building automation systems to acquire exclusive items. That early experience was my true introduction to software, sparking a passion for turning ideas into reality through code and building solutions to complex problems.",
-      "Today, I channel that passion into an obsession with quality and detail. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
+      "Today, I channel that passion into an obsession with quality and detail. Alongside my studies, I’m currently building an AI-powered crypto app as part of an early startup team. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
     ],
   },
   
@@ -96,12 +96,11 @@ export const siteConfig = {
       title: "Lead AI Product Engineer",
       company: "Blai",
       period: "October 2025 - Present",
-      description: "Working on product and engineering at Blai, an AI-powered crypto app focused on conversational market insights and on-chain execution. I contribute to building core app features and platform infrastructure as part of the core team.",
+      description: "Working on product and engineering at Blai, an AI-powered crypto app focused on conversational market insights and on-chain execution. Early core team member contributing to core app features and platform infrastructure.",
       highlights: [
         "Developing user-facing features and workflows for an AI-first crypto app",
         "Collaborating with AI and product teams to integrate market intelligence into the app experience",
         "Building and maintaining backend and product infrastructure supporting real-time data and on-chain interactions",
-        "Iterating quickly in a small team environment, taking features from idea to production"
       ]
     },
     {
