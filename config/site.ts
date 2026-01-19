@@ -93,15 +93,27 @@ export const siteConfig = {
   // Work experience
   experience: [
     {
+      title: "Lead AI Product Engineer",
+      company: "Blai",
+      period: "October 2025 - Present",
+      description: "Working on product and engineering at Blai, an AI-powered crypto app focused on conversational market insights and on-chain execution. I contribute to building core app features and platform infrastructure as part of the core team.",
+      highlights: [
+        "Developing user-facing features and workflows for an AI-first crypto app",
+        "Collaborating with AI and product teams to integrate market intelligence into the app experience",
+        "Building and maintaining backend and product infrastructure supporting real-time data and on-chain interactions",
+        "Iterating quickly in a small team environment, taking features from idea to production"
+      ]
+    },
+    {
       title: "AI Research Assistant",
       company: "University of Vigo (Remote)",
-      period: "July 2025 - Present",
-      description: "Contributing to a research paper on combating social media misinformation. I'm designing and building the core infrastructure for automated claim verification and evidence‑based response generation.",
+      period: "July 2025 - December 2025",
+      description: "Contributed to a research paper on combating social media misinformation. I designed and built the core infrastructure for automated claim verification and evidence‑based response generation.",
       highlights: [
-        "Engineering a Retrieval‑Augmented Generation (RAG) pipeline to perform automated claim verification on posts flagged as potential misinformation",
-        "Building a scalable vector knowledge base using FAISS to index thousands of fact‑checked claims, enabling real‑time semantic search for evidence retrieval",
-        "Integrating Large Language Models (LLMs) to synthesize retrieved evidence and generate concise, accurate rebuttal messages with source citations",
-        "Developing data ingestion and end‑to‑end evaluation scripts to ensure the system's robustness and accuracy"
+        "Engineered a Retrieval‑Augmented Generation (RAG) pipeline to perform automated claim verification on posts flagged as potential misinformation",
+        "Built a scalable vector knowledge base using FAISS to index thousands of fact‑checked claims, enabling real‑time semantic search for evidence retrieval",
+        "Integrated Large Language Models (LLMs) to synthesize retrieved evidence and generate concise, accurate rebuttal messages with source citations",
+        "Developed data ingestion and end‑to‑end evaluation scripts to ensure the system's robustness and accuracy"
       ]
     },
     {
