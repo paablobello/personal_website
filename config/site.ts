@@ -122,7 +122,7 @@ export const siteConfig = {
       description: "Engineered and deployed custom bots and automation systems for purchasing high-demand limited items (sneakers, event tickets, collectibles, etc.) in competitive online environments where speed and reliability determine success.",
       highlights: [
         "Developed end-to-end purchase automation pipelines: real-time inventory monitoring, queue bypass, and checkout execution in milliseconds",
-        "Reverse-engineered private APIs and implemented anti-detection techniques (CAPTCHA solving, TLS fingerprint control, proxy rotation)",
+        "Reverse-engineered private APIs and implemented anti-detection techniques (CAPTCHA solving, TLS fingerprint control, proxy rotation...)",
         "Built high-speed monitors for product drops and stock changes across 30+ e-commerce platforms"
       ]
     },
