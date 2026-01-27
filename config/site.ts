@@ -117,14 +117,13 @@ export const siteConfig = {
     },
     {
       title: "Freelance Automation Engineer",
-      company: "Self‑employed (Remote)",
+      company: "Self‑employed",
       period: "Dec 2020 - Sept 2024",
-      description: "I design and build custom software solutions with a focus on high‑throughput process automation in competitive web environments. My work centers on engineering systems that operate with speed, reliability, and precision under massive traffic.",
+      description: "Engineered and deployed custom bots and automation systems for purchasing high-demand limited items (sneakers, event tickets, collectibles, etc.) in competitive online environments where speed and reliability determine success.",
       highlights: [
-        "Engineered and deployed purchase‑automation bots for leading e‑commerce platforms, covering the full flow from product monitoring to checkout in milliseconds",
-        "Implemented advanced anti‑bot evasion: CAPTCHA solving, browser‑fingerprint controls, and virtual‑queue navigation",
-        "Created high‑speed monitors for drops and stock changes in real time using web scraping and reverse‑engineering of private APIs",
-        "Managed network infrastructure with residential/datacenter proxy rotation to ensure high availability and avoid blocks"
+        "Developed end-to-end purchase automation pipelines: real-time inventory monitoring, queue bypass, and checkout execution in milliseconds",
+        "Reverse-engineered private APIs and implemented anti-detection techniques (CAPTCHA solving, TLS fingerprint control, proxy rotation)",
+        "Built high-speed monitors for product drops and stock changes across 30+ e-commerce platforms"
       ]
     },
     {
