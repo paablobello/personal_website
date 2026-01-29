@@ -71,7 +71,7 @@ export const siteConfig = {
       title: "M.S. in Artificial Intelligence",
       institution: "Boston University",
       location: "Boston, USA",
-      period: "Sep 2025 - Expected Dec 2026",
+      period: "Sep. 2025 - Expected Dec. 2026",
       description: "Master's in Artificial Intelligence. A graduate program centered on the theory and practical application of modern artificial intelligence. Awarded a merit-based scholarship for academic excellence.",
       highlights: [
 
