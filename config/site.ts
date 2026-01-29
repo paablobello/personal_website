@@ -14,7 +14,7 @@ export const siteConfig = {
     bio: [
       "I'm a Master's in AI student at Boston University (merit scholarship), with a builder's mentality.",
       "My journey into software began at 16, building automation systems to acquire exclusive items. That early experience was my true introduction to software, sparking a passion for turning ideas into reality through code and building solutions to complex problems.",
-      "Today, I channel that passion into an obsession with quality and detail. Alongside my studies, I’m currently building an AI-powered crypto app as part of an early startup team. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
+      "Today, I channel that passion into an obsession with quality and detail. Alongside my studies, I'm a founding engineer at Blai, building an AI-powered crypto advisor app, from the multi-agent intelligence system to the mobile experience. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
     ],
   },
   
@@ -95,7 +95,7 @@ export const siteConfig = {
     {
       title: "Lead AI Product Engineer",
       company: "Blai",
-      period: "October 2025 - Present",
+      period: "Oct. 2025 - Present",
       description: "Founding engineer at Blai, an AI-powered crypto app that delivers personalized market intelligence and on-chain trade execution. Building the product end-to-end, from AI agents to frontend to infrastructure.",
       highlights: [
         "Developing the multi-agent system powering 24/7 market intelligence and the conversational trading advisor",
@@ -106,7 +106,7 @@ export const siteConfig = {
     {
       title: "AI Research Assistant",
       company: "University of Vigo (Remote)",
-      period: "July 2025 - December 2025",
+      period: "Jul. 2025 - Dec. 2025",
       description: "Contributed to a research paper on combating social media misinformation. I designed and built the core infrastructure for automated claim verification and evidence‑based response generation.",
       highlights: [
         "Engineered a Retrieval‑Augmented Generation (RAG) pipeline to perform automated claim verification on posts flagged as potential misinformation",
@@ -118,7 +118,7 @@ export const siteConfig = {
     {
       title: "Freelance Automation Engineer",
       company: "Self‑employed",
-      period: "Dec 2020 - Sept 2024",
+      period: "Dec. 2020 - Sep. 2024",
       description: "Engineered and deployed custom bots and automation systems for purchasing high-demand limited items (sneakers, event tickets, collectibles, etc.) in competitive online environments where speed and reliability determine success.",
       highlights: [
         "Developed end-to-end purchase automation pipelines: real-time inventory monitoring, queue bypass, and checkout execution in milliseconds",
