@@ -96,11 +96,11 @@ export const siteConfig = {
       title: "Lead AI Product Engineer",
       company: "Blai",
       period: "October 2025 - Present",
-      description: "Working on product and engineering at Blai, an AI-powered crypto app focused on conversational market insights and on-chain execution. Early core team member contributing to core app features and platform infrastructure.",
+      description: "Founding engineer at Blai, an AI-powered crypto app that delivers personalized market intelligence and on-chain trade execution. Building the product end-to-end, from AI agents to frontend to infrastructure.",
       highlights: [
-        "Developing user-facing features and workflows for an AI-first crypto app",
-        "Collaborating with AI and product teams to integrate market intelligence into the app experience",
-        "Building and maintaining backend and product infrastructure supporting real-time data and on-chain interactions",
+        "Developing the multi-agent system powering 24/7 market intelligence and the conversational trading advisor",
+        "Building the mobile app experience (iOS/Android) and core product features",
+        "Architecting backend infrastructure for real-time market data, portfolio management and multi-chain execution",
       ]
     },
     {
