@@ -98,31 +98,33 @@ export function InteractiveMap() {
 
       {/* Botones dentro del mapa - estilo Prakash */}
       <div className="absolute bottom-2 left-6 right-6 flex justify-between items-center z-10">
-        <button
-          onClick={() => flyTo("from")}
-          className={`px-5 py-2.5 rounded-lg backdrop-blur-md transition-all ${
-            activeLocation === "from"
-              ? "bg-gray-900/95 text-white shadow-lg"
-              : "bg-gray-800/70 text-gray-300 hover:bg-gray-800/85"
-          }`}
-        >
-          <span className="flex items-center gap-2 text-sm">
-            {siteConfig.locations.from.name}
-            <span>{siteConfig.locations.from.flag}</span>
-          </span>
-        </button>
-        
+        {/* Boston - izquierda */}
         <button
           onClick={() => flyTo("current")}
           className={`px-5 py-2.5 rounded-lg backdrop-blur-md transition-all ${
             activeLocation === "current"
-              ? "bg-gray-900/95 text-white shadow-lg"
-              : "bg-gray-800/70 text-gray-300 hover:bg-gray-800/85"
+              ? "bg-gray-800/70 text-gray-300"
+              : "bg-gray-900/95 text-white shadow-lg hover:bg-gray-800/85"
           }`}
         >
           <span className="flex items-center gap-2 text-sm">
             {siteConfig.locations.current.name}
             <span>{siteConfig.locations.current.flag}</span>
+          </span>
+        </button>
+        
+        {/* A Coruña - derecha */}
+        <button
+          onClick={() => flyTo("from")}
+          className={`px-5 py-2.5 rounded-lg backdrop-blur-md transition-all ${
+            activeLocation === "from"
+              ? "bg-gray-800/70 text-gray-300"
+              : "bg-gray-900/95 text-white shadow-lg hover:bg-gray-800/85"
+          }`}
+        >
+          <span className="flex items-center gap-2 text-sm">
+            {siteConfig.locations.from.name}
+            <span>{siteConfig.locations.from.flag}</span>
           </span>
         </button>
       </div>
