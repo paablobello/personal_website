@@ -72,7 +72,7 @@ export const siteConfig = {
       institution: "Boston University",
       location: "Boston, USA",
       period: "Sep. 2025 - Expected Dec. 2026",
-      description: "Master's in Artificial Intelligence. A graduate program centered on the theory and practical application of modern artificial intelligence. Awarded a merit-based scholarship for academic excellence.",
+      description: "Graduate program with primary focus on machine learning, computer vision, and natural language processing, with emphasis on building modern AI systems. Awarded a merit-based scholarship for academic excellence.",
       highlights: [
 
       ]
@@ -82,7 +82,7 @@ export const siteConfig = {
       institution: "Universidad de Vigo",
       location: "Ourense, Spain",
       period: "2020 - 2024",
-      description: "Bachelor's in Computer Science. A solid foundation in computer science fundamentals, including algorithms, data structures, database systems, software engineering principles, computer networks, and operating systems.",
+      description: "A solid foundation in computer science fundamentals, including algorithms, data structures, AI/ML, database systems, software engineering, and computer networks, among others.",
       highlights: [
         "Ranked in the top 10% of the Computer Science School for outstanding academic performance.",
         "Thesis with Distinction (9.8/10): Developed 'Fake News Detector', a full-stack AI platform to combat social media misinformation.",
