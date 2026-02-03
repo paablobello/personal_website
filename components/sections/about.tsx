@@ -1,5 +1,15 @@
+import dynamic from "next/dynamic"
 import { siteConfig } from "@/config/site"
-import { InteractiveMap } from "@/components/interactive-map"
+
+const InteractiveMap = dynamic(
+  () => import("@/components/interactive-map").then(mod => ({ default: mod.InteractiveMap })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="relative w-full h-[260px] md:h-[320px] rounded-lg overflow-hidden border bg-muted animate-pulse" />
+    ),
+  }
+)
 
 export function About() {
   return (

@@ -68,9 +68,10 @@ export function InteractiveMap() {
           <div className="relative flex items-center justify-center cursor-pointer">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-3 border-white shadow-lg ring-2 ring-gray-900/10 hover:scale-110 transition-transform">
               <Image
-                src="/house.png"
+                src="/house.webp"
                 alt="House"
-                fill
+                width={48}
+                height={48}
                 className="object-cover"
               />
             </div>
@@ -86,9 +87,10 @@ export function InteractiveMap() {
           <div className="relative flex items-center justify-center cursor-pointer">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-3 border-white shadow-lg ring-2 ring-gray-900/10 hover:scale-110 transition-transform">
               <Image
-                src="/memoji.png"
+                src="/memoji.webp"
                 alt="Pablo Bello"
-                fill
+                width={48}
+                height={48}
                 className="object-cover"
               />
             </div>

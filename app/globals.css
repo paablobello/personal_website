@@ -7,9 +7,8 @@
   .split-word,
   .split-line {
     display: inline-block;
-    will-change: transform, opacity;
     vertical-align: baseline;
-    line-height: 1.2;
+    line-height: inherit;
   }
   
   .split-emoji {
@@ -21,7 +20,7 @@
   .split-parent {
     visibility: visible !important;
     overflow: visible !important;
-    line-height: 1.2;
+    line-height: inherit;
   }
 }
 
@@ -94,24 +93,11 @@
     @apply transition-colors duration-200;
   }
   
-  /* Ocultar logo y atribución de Mapbox completamente */
+  /* Ocultar logo y atribución de Mapbox */
   .mapboxgl-ctrl-logo,
-  .mapboxgl-ctrl-attrib,
-  .mapboxgl-ctrl-attrib-inner,
   .mapboxgl-ctrl-bottom-left,
-  .mapboxgl-ctrl-bottom-right,
-  .mapboxgl-ctrl,
-  a.mapboxgl-ctrl-logo,
-  a[href="https://www.mapbox.com/"],
-  a[aria-label="Mapbox homepage"] {
+  .mapboxgl-ctrl-bottom-right {
     display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    position: absolute !important;
-    left: -9999px !important;
   }
 }
 

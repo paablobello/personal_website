@@ -16,7 +16,7 @@ export function Navigation() {
     }
 
     // Listener para el scroll
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
 
     // Cleanup
     return () => window.removeEventListener("scroll", handleScroll)

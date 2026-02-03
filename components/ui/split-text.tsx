@@ -77,15 +77,15 @@ const SplitText: React.FC<SplitTextProps> = ({
                 // Check if it's an emoji (Unicode range)
                 const isEmoji = /\p{Emoji}/u.test(char);
                 if (isEmoji) {
-                  return `<span class="split-char split-emoji" style="display: inline-block; opacity: 0; will-change: transform, opacity; transform: translate3d(0,0,0);">${char}</span>`;
+                  return `<span class="split-char split-emoji" style="display: inline-block; opacity: 0;">${char}</span>`;
                 }
-                return `<span class="split-char" style="display: inline-block; opacity: 0; will-change: transform, opacity; transform: translate3d(0,0,0);">${char}</span>`;
+                return `<span class="split-char" style="display: inline-block; opacity: 0;">${char}</span>`;
               })
               .join('');
             // Wrap each word in a container with inline-block to prevent word breaking
             return `<span class="split-word-wrapper" style="display: inline-block; white-space: nowrap;">${charsHTML}</span>`;
           })
-          .join('<span class="split-char" style="display: inline-block; opacity: 0; will-change: transform, opacity; transform: translate3d(0,0,0);">&nbsp;</span>');
+          .join('<span class="split-char" style="display: inline-block; opacity: 0;">&nbsp;</span>');
         targets = Array.from(el.querySelectorAll('.split-char'));
       } else if (splitType.includes('words')) {
         // Split by words
@@ -114,6 +114,10 @@ const SplitText: React.FC<SplitTextProps> = ({
             ease,
             stagger: delay / 1000,
             onComplete: () => {
+              targets.forEach(t => {
+                t.style.willChange = 'auto';
+                t.style.transform = '';
+              });
               animationCompletedRef.current = true;
               onLetterAnimationComplete?.();
             },
@@ -151,6 +155,10 @@ const SplitText: React.FC<SplitTextProps> = ({
               invalidateOnRefresh: false,
             },
             onComplete: () => {
+              targets.forEach(t => {
+                t.style.willChange = 'auto';
+                t.style.transform = '';
+              });
               animationCompletedRef.current = true;
               onLetterAnimationComplete?.();
             },
@@ -187,8 +195,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   const style: React.CSSProperties = {
     textAlign,
     wordWrap: 'break-word',
-    opacity: fontsLoaded ? 1 : 0,
-    transition: 'opacity 0.1s ease',
+    visibility: fontsLoaded ? 'visible' : 'hidden',
     overflow: 'visible',
     ...customStyle,
   };
