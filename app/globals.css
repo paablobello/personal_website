@@ -93,8 +93,9 @@
     @apply transition-colors duration-200;
   }
   
-  /* Ocultar logo y atribución de Mapbox */
+  /* Ocultar logo y controles de Mapbox */
   .mapboxgl-ctrl-logo,
+  .mapboxgl-ctrl,
   .mapboxgl-ctrl-bottom-left,
   .mapboxgl-ctrl-bottom-right {
     display: none !important;
