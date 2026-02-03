@@ -13,8 +13,8 @@ export const siteConfig = {
     workingHours: "8:00–23:00 ET",
     bio: [
       "I'm a Master's in AI student at Boston University (merit scholarship), with a builder's mentality.",
-      "My journey into software began at 16, building automation systems to acquire exclusive items. That early experience was my true introduction to software, sparking a passion for turning ideas into reality through code and building solutions to complex problems.",
-      "Today, I channel that passion into an obsession with quality and detail. Alongside my studies, I'm a founding engineer at Blai, building an AI-powered crypto advisor app, from the multi-agent intelligence system to the mobile experience. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
+      "My journey into software began at 16, building bots to acquire limited-edition items (sneakers, tickets, collectibles...), a side project that grew into a 4-year freelance business. That early experience shaped how I approach building: fast execution, reliability, and attention to detail.",
+      "Today, alongside my studies, I'm a founding engineer at Blai, building an AI-powered crypto advisor app, from the multi-agent intelligence system to the mobile experience. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
     ],
   },
   
