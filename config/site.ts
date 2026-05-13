@@ -14,7 +14,7 @@ export const siteConfig = {
     bio: [
       "I'm a Master's in AI student at Boston University (merit scholarship), with a builder's mentality.",
       "My journey into software began at 16, building bots to acquire limited-edition items (sneakers, tickets, collectibles...), a side project that grew into a 4-year freelance business. That early experience shaped how I approach building: fast execution, reliability, and attention to detail.",
-      "Today, alongside my studies, I'm a founding engineer at Blai, building an AI-powered crypto advisor app, from the multi-agent intelligence system to the mobile experience. My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
+      "My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
     ],
   },
   
@@ -93,14 +93,16 @@ export const siteConfig = {
   // Work experience
   experience: [
     {
-      title: "Lead AI Product Engineer",
+      title: "Lead AI Engineer",
       company: "Blai",
-      period: "Oct. 2025 - Present",
-      description: "Founding engineer at Blai, an AI-powered crypto app that delivers personalized market intelligence and on-chain trade execution. Building the product end-to-end, from AI agents to frontend to infrastructure.",
+      period: "Oct. 2025 - Apr. 2026",
+      description: "Founding engineer at Blai, a non-custodial stablecoin yield platform for businesses and institutions.",
       highlights: [
-        "Developing the multi-agent system powering 24/7 market intelligence and the conversational trading advisor",
-        "Building the mobile app experience (iOS/Android) and core product features",
-        "Architecting backend infrastructure for real-time market data, portfolio management and multi-chain execution",
+        "Built the full B2B stack end-to-end: backend, AI multi-agent risk engine, and frontend.",
+        "Integrated Bridge, Privy, and Aave v3 / Morpho on Base into a single fiat-to-yield flow.",
+        "Shipped the natural language AI interface for treasury managers to deploy capital and manage positions conversationally.",
+        "Onboarded first beta clients with $150K+ deployed in the first two weeks.",
+        "Previously built the original Blai consumer app — an AI crypto advisor with on-chain trade execution — whose multi-agent system became the foundation for the institutional product.",
       ]
     },
     {
