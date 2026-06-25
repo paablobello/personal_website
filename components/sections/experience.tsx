@@ -13,6 +13,9 @@ export function Experience() {
                 <div>
                   <h3 className="text-xl font-semibold">{exp.title}</h3>
                   <p className="text-muted-foreground">{exp.company}</p>
+                  {exp.location && (
+                    <p className="text-sm text-muted-foreground">{exp.location}</p>
+                  )}
                 </div>
                 <span className="text-sm text-muted-foreground">{exp.period}</span>
               </div>

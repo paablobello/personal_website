@@ -103,6 +103,7 @@ export const siteConfig = {
     {
       title: "Lead AI Engineer",
       company: "Blai",
+      location: "Cambridge, Massachusetts",
       period: "Oct. 2025 - Apr. 2026",
       description: "Founding engineer at Blai, a non-custodial stablecoin yield platform for businesses and institutions.",
       highlights: [
@@ -115,7 +116,8 @@ export const siteConfig = {
     },
     {
       title: "AI Research Assistant",
-      company: "University of Vigo (Remote)",
+      company: "University of Vigo",
+      location: "Remote",
       period: "Jul. 2025 - Dec. 2025",
       description: "Contributed to a research paper on combating social media misinformation. I designed and built the core infrastructure for automated claim verification and evidence‑based response generation.",
       highlights: [
@@ -128,7 +130,7 @@ export const siteConfig = {
     {
       title: "Freelance Automation Engineer",
       company: "Self‑employed",
-      period: "Dec. 2020 - Sep. 2024",
+      period: "Dec. 2019 - Sep. 2024",
       description: "Engineered and deployed custom bots and automation systems for purchasing high-demand limited items (sneakers, event tickets, collectibles, etc.) in competitive online environments where speed and reliability determine success.",
       highlights: [
         "Developed end-to-end purchase automation pipelines: real-time inventory monitoring, queue bypass, and checkout execution in milliseconds",
@@ -139,7 +141,7 @@ export const siteConfig = {
     {
       title: "Software Engineer Intern",
       company: "NTT Data",
-      location: "",
+      location: "A Coruña, Galicia",
       period: "Sep. 2023 - Dec. 2023",
       description: "Contributed to the modernization of CENPOS, a large-scale healthcare management platform. Focus on backend optimizations to improve scalability and data processing speed for critical operations.",
       highlights: [
