@@ -93,6 +93,14 @@ export const siteConfig = {
   // Work experience
   experience: [
     {
+      title: "AI Engineer Intern",
+      company: "Magnific (formerly Freepik)",
+      location: "San Francisco, California",
+      period: "May 2026 - Present",
+      description: "",
+      highlights: []
+    },
+    {
       title: "Lead AI Engineer",
       company: "Blai",
       period: "Oct. 2025 - Apr. 2026",

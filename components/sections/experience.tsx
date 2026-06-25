@@ -17,18 +17,22 @@ export function Experience() {
                 <span className="text-sm text-muted-foreground">{exp.period}</span>
               </div>
               
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                {exp.description}
-              </p>
-              
-              <ul className="space-y-2">
-                {exp.highlights.map((highlight, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1 w-1 rounded-full bg-foreground/40 flex-shrink-0" />
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
+              {exp.description && (
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {exp.description}
+                </p>
+              )}
+
+              {exp.highlights.length > 0 && (
+                <ul className="space-y-2">
+                  {exp.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="mt-1.5 h-1 w-1 rounded-full bg-foreground/40 flex-shrink-0" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
