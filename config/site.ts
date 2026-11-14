@@ -281,6 +281,19 @@ export const siteConfig = {
   // Projects
   projects: [
     {
+      title: "Tastepix",
+      description: "A hosted MCP server that brings every major image model into Claude, ChatGPT, Cursor, Claude Code and Codex. Ask for an image in plain words and it appears right in the chat, paid per image with no subscription.",
+      highlights: [
+        "12 image models (Nano Banana, GPT Image, FLUX, Seedream, Recraft...) behind one account, plus background removal, upscaling, SVG vectorizing and image to video",
+        "Remote MCP server on Cloudflare Workers with OAuth 2.1 sign in, so users connect once without any API keys",
+        "Interactive image viewer rendered inline in the chat with MCP Apps: download, edit, reuse as reference or recreate",
+        "Prepaid credits with Stripe, automatic refunds for failed generations, and a web gallery with everything users create"
+      ],
+      tech: ["TypeScript", "MCP", "Cloudflare Workers", "Convex", "Better Auth", "Stripe", "React", "Tailwind CSS"],
+      github: "https://github.com/paablobello/tastepix-mcp",
+      demo: "https://tastepix.com/",
+    },
+    {
       title: "AI Fake News Detector Model & Dashboard",
       description: "A full-stack, AI-powered platform that combats misinformation on social media using a hybrid RoBERT-LSTM model, multi-source fact-checking, AI-generated refutations sourced by a web scraping agent, and an interactive real-time analytics dashboard.",
       tech:["Next.js", "TypeScript", "FastAPI", "PyTorch", "Transformers", "OpenAI API", "Tailwind CSS", "Supabase", "Docker", "Google Fact Check API"],
