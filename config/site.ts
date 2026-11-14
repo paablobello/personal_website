@@ -13,7 +13,7 @@ export const siteConfig = {
     workingHours: "8:00–23:00 ET",
     bio: [
       "I'm a Master's in AI student at Boston University (merit scholarship), with a builder's mentality.",
-      "My journey into software began at 16, building bots to acquire limited-edition items (sneakers, tickets, collectibles...), a side project that grew into a 4-year freelance business. That early experience shaped how I approach building: fast execution, reliability, and attention to detail.",
+      "I started coding at 16, teaching myself through YouTube tutorials so I could build bots to buy limited edition sneakers. That hobby became my first business: I built my own automation software, sold it on a subscription basis, and grew it into a profitable business with recurring revenue that I ran for almost five years. It taught me to ship fast, obsess over reliability, and build things people are willing to pay for.",
       "My goal is to combine my academic training in AI with a practical builder's mentality to create software that is both intelligent and genuinely delightful to use."
     ],
   },
@@ -128,14 +128,15 @@ export const siteConfig = {
       ]
     },
     {
-      title: "Freelance Automation Engineer",
-      company: "Self‑employed",
+      title: "Founder & Developer",
+      company: "Independent",
       period: "Dec. 2019 - Sep. 2024",
-      description: "Engineered and deployed custom bots and automation systems for purchasing high-demand limited items (sneakers, event tickets, collectibles, etc.) in competitive online environments where speed and reliability determine success.",
+      description: "Built and ran a subscription software business selling automation tools for limited release products (sneakers, event tickets, collectibles), where speed and reliability decide who wins. Grew it into a profitable business with recurring monthly revenue.",
       highlights: [
-        "Developed end-to-end purchase automation pipelines: real-time inventory monitoring, queue bypass, and checkout execution in milliseconds",
-        "Reverse-engineered private APIs and implemented anti-detection techniques (CAPTCHA solving, TLS fingerprint control, proxy rotation...)",
-        "Built high-speed monitors for product drops and stock changes across 30+ e-commerce platforms"
+        "Taught myself to code at 16 and turned a side project into a self funded, profitable business",
+        "Owned the full product end to end: development, infrastructure, pricing, and customer support",
+        "Built high speed monitors and checkout automation across 30+ ecommerce platforms, executing in milliseconds",
+        "Reverse engineered private APIs and handled bot protection systems (CAPTCHAs, TLS fingerprinting, proxy rotation)"
       ]
     },
     {
