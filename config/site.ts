@@ -282,14 +282,13 @@ export const siteConfig = {
   projects: [
     {
       title: "Tastepix",
-      description: "A hosted MCP server that brings every major image model into Claude, ChatGPT, Cursor, Claude Code and Codex. Ask for an image in plain words and it appears right in the chat, paid per image with no subscription.",
+      description: "An MCP server that brings every major image model into Claude, ChatGPT, Cursor and Codex. Ask for an image in plain words and it appears right in the chat.",
       highlights: [
-        "12 image models (Nano Banana, GPT Image, FLUX, Seedream, Recraft...) behind one account, plus background removal, upscaling, SVG vectorizing and image to video",
-        "Remote MCP server on Cloudflare Workers with OAuth 2.1 sign in, so users connect once without any API keys",
-        "Interactive image viewer rendered inline in the chat with MCP Apps: download, edit, reuse as reference or recreate",
-        "Prepaid credits with Stripe, automatic refunds for failed generations, and a web gallery with everything users create"
+        "12 image models in one account, plus background removal, upscaling and image to video",
+        "Runs on Cloudflare Workers with OAuth sign in, no API keys needed",
+        "Pay per image with Stripe, no subscription"
       ],
-      tech: ["TypeScript", "MCP", "Cloudflare Workers", "Convex", "Better Auth", "Stripe", "React", "Tailwind CSS"],
+      tech: ["TypeScript", "MCP", "Cloudflare Workers", "Convex", "Stripe", "React"],
       github: "https://github.com/paablobello/tastepix-mcp",
       demo: "https://tastepix.com/",
     },
