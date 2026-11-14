@@ -81,7 +81,7 @@ export const siteConfig = {
       title: "B.S. in Computer Science",
       institution: "Universidad de Vigo",
       location: "Ourense, Spain",
-      period: "2020 - 2024",
+      period: "",
       description: "A solid foundation in computer science fundamentals, including algorithms, data structures, AI/ML, database systems, software engineering, and computer networks, among others.",
       highlights: [
         "Ranked in the top 10% of the Computer Science School for outstanding academic performance.",
